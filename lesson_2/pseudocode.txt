@@ -1,0 +1,91 @@
+1) a method that returns the sum of two integers
+
+Solicit an integer
+  Assign input to value
+  Check integer is valid
+  Repeat for second integer
+Add them together
+Return the output
+
+START
+PRINT Solicit first integer
+SET integer1 = GET input
+PRINT Solicit second integer
+SET integer2 = GET input
+SET answer = integer1 + integer2
+RETURN answer
+
+2) a method that takes an array of strings, and returns a string that is all those strings concatenated together
+
+START
+
+# Given a collection of strings called "strings"
+
+SET iterator = 1
+SET concatenated_string = ""
+
+WHILE iterator <= length of strings
+  SET concatenated_string = concatenated_string + value within strings collection at space "iterator"
+  iterator = iterator + 1
+
+RETURN concatenated_string
+
+3) a method that takes an array of integers, and returns a new array with every other element from the original array, starting with the first element. For instance:
+
+START
+
+# Given a collection of integers called "integers"
+
+SET iterator = 1
+SET new_collection = empty collection
+
+WHILE iterator <= length of integers
+  IF iterator is even
+    iterator = iterator + 1
+    BREAK
+  ELSE
+    SET new collection = new_collection + value of integers at space "iterator"
+    iterator = iterator + 1
+
+RETURN concatenated_string
+
+4) a method that determines the index of the 3rd occurrence of a given character in a string. For instance, if the given character is 'x' and the string is 'axbxcdxex', the method should return 6 (the index of the 3rd 'x'). If the given character does not occur at least 3 times, return nil.
+
+START
+
+# Given character called "letter" and a string called "word"
+
+SET iterator = 1
+SET counter = 0
+
+WHILE iterator <= length of word
+  IF character == word at index of iterator
+    counter = counter + 1
+    IF counter == 3
+      RETURN iterator # watch for edge case on the location, might be iterator - 1
+  iterator = iterator + 1
+
+RETURN nil
+
+END
+
+5) a method that takes two arrays of numbers and returns the result of merging the arrays. The elements of the first array should become the elements at the even indexes of the returned array, while the elements of the second array should become the elements at the odd indexes. For instance:
+
+START
+
+# Given two arrays of integers, "array1" and "array2"
+
+SET iterator = 1
+SET combined = new empty array
+#probably should check arrays are same length but we'll ignore for new_collection
+
+WHILE iterator <= length of array1
+  combined = combined + value of array1 at iterator
+  combined = combined + value of array2 at iterator
+  iterator = iterator + 1
+
+RETURN combined
+
+END
+
+
